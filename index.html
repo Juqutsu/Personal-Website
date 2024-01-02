@@ -40,8 +40,42 @@
 		</div>
 
 		<div class="home-img">
-			<img src="images/rimuru.png">
+			<img class="randomImage" alt="Random Image Generator">
 		</div>
+		
+		<script>
+			// Array of image URLs
+			var imageUrls = [
+				'images/rndm/pic1.png',
+				'images/rndm/pic2.png',
+				'images/rndm/pic3.png',
+				'images/rndm/pic4.png',
+				'images/rndm/pic5.png',
+				'images/rndm/pic6.png',
+				'images/rndm/pic7.png',
+				'images/rndm/pic8.png',
+				'images/rndm/pic9.png',
+				'images/rndm/pic10.png',
+				// Add more image URLs as needed
+			];
+		
+			// Function to get a random image URL
+			function getRandomImageUrl() {
+				var randomIndex = Math.floor(Math.random() * imageUrls.length);
+				return imageUrls[randomIndex];
+			}
+		
+			// Function to set a random image on page load
+			function setRandomImage() {
+				var randomImageUrl = getRandomImageUrl();
+				var randomImageElement = document.querySelector('.randomImage');
+				randomImageElement.src = randomImageUrl;
+			}
+		
+			// Call the function on page load
+			setRandomImage();
+		</script>
+	
 	</section>
 
 
