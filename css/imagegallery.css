@@ -14,3 +14,11 @@ img {
   max-width: 400px;
   width: 100%;
 }
+
+.btn {
+  width: 30px;
+  height: 30px;
+  background-color: aliceblue;
+  border: none;
+  border-radius: 6px;
+}
