@@ -408,14 +408,14 @@ header.sticky{
 		left: 0;
 		right: 0;
 		flex-direction: column;
-		background: var(--bg-color);
 		text-align: right;
 		transition: all .50s;
+		background: var(--bg-color);
 	}
 	.navlist a{
 		display: block;
-		border-right: 2px solid var(--bg-color);
 		color: var(--text-color);
+		border-right: 2px solid var(--bg-color);
 	}
 	.navlist a:hover{
 		background: var(--bg-color);
