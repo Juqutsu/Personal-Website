@@ -1,7 +1,7 @@
 {
     "name": "Personal-Website/composer",
     "type": "library",
-    "description": "Composer helps you declare, manage and install dependencies of PHP projects. It ensures you have the right stack everywhere.",
+    "description": "Personal Site",
     "keywords": [
         "package",
         "dependency",
