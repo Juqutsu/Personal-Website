@@ -1,5 +1,5 @@
 {
-    "name": "Personal Website/composer",
+    "name": "Personal Website",
     "description": "Personal Site",
     "keywords": [
         "package",
@@ -10,7 +10,7 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Lukas Müller",
+            "name": "Lukas Mueller",
             "email": "muller.lukas1310@gmail.com",
             "homepage": "https://www.juqutsu.de"
         }
