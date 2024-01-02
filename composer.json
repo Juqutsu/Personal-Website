@@ -1,8 +1,22 @@
 {
-    "name": "main/Personal-Website",
-    "description": "A short description of what your package does",
+    "name": "Personal-Website/composer",
+    "type": "library",
+    "description": "Composer helps you declare, manage and install dependencies of PHP projects. It ensures you have the right stack everywhere.",
+    "keywords": [
+        "package",
+        "dependency",
+        "autoload"
+    ],
+    "homepage": "www.juqutsu.de",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lukas Müller",
+            "email": "muller.lukas1310@gmail.com",
+            "homepage": "www.juqutsu.de"
+        }
+    ],
     "require": {
-        "php": ">=8.2",
-        "another-vendor/package": "1.*"
+        "php": ">=8.2"
     }
 }
