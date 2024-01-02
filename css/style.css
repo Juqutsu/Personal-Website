@@ -410,7 +410,7 @@ header.sticky{
 		flex-direction: column;
 		background: var(--bg-color);
 		text-align: right;
-		transition: all .40s;
+		transition: all .50s;
 	}
 	.navlist a{
 		display: block;
