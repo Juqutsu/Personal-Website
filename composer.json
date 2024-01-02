@@ -1,19 +1,18 @@
 {
     "name": "Personal-Website/composer",
-    "type": "library",
     "description": "Personal Site",
     "keywords": [
         "package",
         "dependency",
         "autoload"
     ],
-    "homepage": "www.juqutsu.de",
+    "homepage": "https://www.juqutsu.de",
     "license": "MIT",
     "authors": [
         {
             "name": "Lukas Müller",
             "email": "muller.lukas1310@gmail.com",
-            "homepage": "www.juqutsu.de"
+            "homepage": "https://www.juqutsu.de"
         }
     ],
     "require": {
