@@ -86,6 +86,7 @@ body {
       align-items: center;
     }
     
+    
     .google-img {
       width: 300px;
     }
@@ -115,7 +116,8 @@ body {
     
     .search #microphone {
       height: 20px;
-      position: absolute;
+      position: relative;
+      margin-left: -20px;
       right: 15px;
     }
     
@@ -176,4 +178,19 @@ body {
       color: #555;
       padding: 1.7vh 10px 1vh;
       flex-shrink: 1;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .search-input {
+        width: 90%;
+        padding: 1px 30px 1px 20px;
+      }
+    
+      .google-img {
+        width: 60%;
+      }
+
+      #microphone {
+        margin-left: -20px;
+      }
     }
