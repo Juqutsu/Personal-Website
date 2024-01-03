@@ -10,7 +10,6 @@ body {
   }
   
   .header {
-    
     flex: 1;
     display: flex;
     justify-content: space-between;
@@ -19,18 +18,8 @@ body {
     padding: 0px -30px 0px 00px;
     width: 100%;
     line-height: 2;
-  
   }
   
-  .header-left {
-    display: flex;
-    align-self: left;
-  }
-  
-  .header-right {
-    display: flex;
-    align-self: right;
-  }
   
   .header a {
     text-decoration: none;
@@ -47,17 +36,12 @@ body {
     border-radius: 20px;
   }
 
-
-  
-  .header a:hover,
-  .header a.hover,
   .header a:hover {
     color: #555;
     text-decoration: underline;
   }
   
   .apps-bg {
-      display: flex;
       width: 45px;
       height: 45px;
       justify-content: center;

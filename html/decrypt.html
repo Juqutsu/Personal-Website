@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verschlüsselung & Entschlüsselung</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #edf6f9;
+        }
+
+        .type {
+            text-align: center;
+            width: 30%;
+            height: 25%;
+            background-color: antiquewhite;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+
+        .type .input {
+            width: 50%;
+            height: 10%;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            padding-left: 12px;
+        }
+
+        .decrypt input {
+            width: 20%;
+            height: 25px;
+            margin-top: 10px;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <!-- Caesar -->
+
+    <div class="container">
+        <div class="type">
+            <h1>Cäsar Chiffre</h1>
+            <input class="input" id="cypher" type="text" placeholder="Gib einen Text ein">
+            <br>
+            <input class="input" id="offset" type="number" placeholder="Offset">
+            <br>
+            <input type="text" id="finish" class="input" placeholder="Verschlüsselung">
+            <input type="text" id="finish" class="input" placeholder="Entschlüsselung">
+            <div class="decrypt">
+                <input type="submit" value="Verschlüsselung">
+                <input type="submit" value="Entschlüsselung">
+            </div>
+    </div>
+    
+    <script src="../js/decrypt.js"></script>
+
+</body>
+</html>
