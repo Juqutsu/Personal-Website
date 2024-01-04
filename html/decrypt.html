@@ -17,6 +17,7 @@
             font-family: 'Montserrat', sans-serif;
             overflow: hidden;
         }
+        
 
         .container {
             display: flex;
@@ -28,8 +29,8 @@
 
         .type {
             text-align: center;
-            width: 35%;
-            height: 20%;
+            width: 550px;
+            height: 300px;
             background-color: #f5ebe0;
             border-radius: 10px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
@@ -68,6 +69,9 @@
         }
 
 
+
+
+
     </style>
 
 </head>
@@ -76,15 +80,16 @@
 
     <div class="container">
         <div class="type">
-            <h1>CYPHER</h1>
+            <h1>WE CRYPST</h1>
             <input class="input" id="cypher" type="text" placeholder="Gib einen Text ein">
             <br>
-            <input class="input" id="offset" type="number" placeholder="Offset (Positiv = Verschlüsselt | Negativ = Entschlüsselung)">
+            <input class="input" id="offset" type="number" placeholder="Offset">
             <br>
             <input type="text" id="finish" class="input" placeholder="Ver- und Entschlüsselung">
             <br>
             <button id="encryptBtn">Verschlüsseln</button>
             <button id="decryptBtn">Entschlüsseln</button>
+        </div>
     </div>
     
     <script src="../js/decrypt.js"></script>
