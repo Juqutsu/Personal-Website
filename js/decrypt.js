@@ -1,41 +1,78 @@
 var alphabet = "abcdefghijklmnopqrstuvwxyz";
 var fullAlphabet = alphabet + alphabet + alphabet;
 
-function runCipher(){
+function encryptText() {
   var cipherText = $('#cypher').val();
   var cipherOffset = $('#offset').val();
   cipherOffset = (cipherOffset % alphabet.length);
   var cipherFinish = '';
 
-  for(i=0; i<cipherText.length; i++){
-     var letter = cipherText[i];
-     var upper = (letter == letter.toUpperCase());
-     letter = letter.toLowerCase();
-    
-     var index = alphabet.indexOf(letter);
-     if(index == -1){
-       cipherFinish += letter;
-     } else {
-       index = ((index + cipherOffset) + alphabet.length);
-       var nextLetter = fullAlphabet[index];
-       if(upper) nextLetter = nextLetter.toUpperCase();
-       cipherFinish += nextLetter;
-     }
+  for (var i = 0; i < cipherText.length; i++) {
+    var letter = cipherText[i];
+    var upper = (letter == letter.toUpperCase());
+    letter = letter.toLowerCase();
+
+    var index = alphabet.indexOf(letter);
+    if (index == -1) {
+      cipherFinish += letter;
+    } else {
+      index = ((index + cipherOffset) + alphabet.length);
+      var nextLetter = fullAlphabet[index];
+      if (upper) nextLetter = nextLetter.toUpperCase();
+      cipherFinish += nextLetter;
+    }
   }
-    
+
+  $('#finish').val(cipherFinish);
+}
+
+function decryptText() {
+  var cipherText = $('#cypher').val();
+  var cipherOffset = $('#offset').val();
+  cipherOffset = (cipherOffset % alphabet.length);
+  var cipherFinish = '';
+
+  for (var i = 0; i < cipherText.length; i++) {
+    var letter = cipherText[i];
+    var upper = (letter == letter.toUpperCase());
+    letter = letter.toLowerCase();
+
+    var index = alphabet.indexOf(letter);
+    if (index == -1) {
+      cipherFinish += letter;
+    } else {
+      index = ((index - cipherOffset) + alphabet.length);
+      var nextLetter = fullAlphabet[index];
+      if (upper) nextLetter = nextLetter.toUpperCase();
+      cipherFinish += nextLetter;
+    }
+  }
+
   $('#finish').val(cipherFinish);
 }
 
 $(document).ready(function() {
-  $('#cypher').keypress(function(){
-    setTimeout(function(){ runCipher(); },20);
+  $('#encryptBtn').click(function() {
+    encryptText();
   });
-  $('#cypher').blur(function(){
-    runCipher();
+
+  $('#decryptBtn').click(function() {
+    decryptText();
   });
-  $('#offset').change(function(){
-    setTimeout(runCipher(),20);
+
+  $('#cypher').keypress(function() {
+    setTimeout(function() {
+      encryptText();
+    }, 20);
   });
-  
-  runCipher();
+
+  $('#cypher').blur(function() {
+    encryptText();
+  });
+
+  $('#offset').change(function() {
+    setTimeout(encryptText, 20);
+  });
+
+  encryptText();
 });

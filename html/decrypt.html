@@ -8,8 +8,14 @@
 
     <style>
 
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
         body {
             font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
         }
 
         .container {
@@ -17,21 +23,21 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #edf6f9;
+            background-color: #d6ccc2;
         }
 
         .type {
             text-align: center;
-            width: 30%;
-            height: 25%;
-            background-color: antiquewhite;
+            width: 35%;
+            height: 20%;
+            background-color: #f5ebe0;
             border-radius: 10px;
             box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
             color: black;
         }
 
         .type .input {
-            width: 50%;
+            width: 70%;
             height: 10%;
             border-radius: 10px;
             border: 2px solid rgba(0, 0, 0, 0.2);
@@ -39,12 +45,22 @@
             padding-left: 12px;
         }
 
-        .decrypt input {
-            width: 20%;
-            height: 25px;
+        .type h1 {
+            margin-top: 20px;
+            margin-bottom: 8px;
+            font-size: 35px;
+            color: #8a817c;
+        }
+
+
+        .type button {
             margin-top: 10px;
+            width: 22%;
+            height: 12%;
+            border: 2px solid #ccc5b9;
+            background-color: #d6ccc2;
             border-radius: 10px;
-            border: 2px solid rgba(0, 0, 0, 0.2);
+            color: #8a817c;
         }
 
 
@@ -56,17 +72,15 @@
 
     <div class="container">
         <div class="type">
-            <h1>Cäsar Chiffre</h1>
+            <h1>CYPHER</h1>
             <input class="input" id="cypher" type="text" placeholder="Gib einen Text ein">
             <br>
-            <input class="input" id="offset" type="number" placeholder="Offset">
+            <input class="input" id="offset" type="number" placeholder="Offset (Positiv = Verschlüsselt | Negativ = Entschlüsselung)">
             <br>
-            <input type="text" id="finish" class="input" placeholder="Verschlüsselung">
-            <input type="text" id="finish" class="input" placeholder="Entschlüsselung">
-            <div class="decrypt">
-                <input type="submit" value="Verschlüsselung">
-                <input type="submit" value="Entschlüsselung">
-            </div>
+            <input type="text" id="finish" class="input" placeholder="Ver- und Entschlüsselung">
+            <br>
+            <button id="encryptBtn">Verschlüsseln</button>
+            <button id="decryptBtn">Entschlüsseln</button>
     </div>
     
     <script src="../js/decrypt.js"></script>

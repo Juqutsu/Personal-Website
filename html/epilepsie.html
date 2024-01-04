@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: colorChange 0.01s infinite;
+        }
+
+        @keyframes colorChange {
+            0% {
+                background-color: red;
+            }
+            33% {
+                background-color: green;
+            }
+            50% {
+                background-color: yellow;
+            }
+            66% {
+                background-color: blue;
+            }
+            100% {
+                background-color: red;
+            }
+        }
+    </style>
+</head>
+<body>
+</body>
+</html>
