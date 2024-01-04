@@ -1,180 +1,195 @@
 body {
-    background-color: #fff;
-    font-family: sans-serif;
-    color: #555;
-  }
-  /* HEADER */
-  .container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .header {
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding: 0px -30px 0px 00px;
-    width: 100%;
-    line-height: 2;
-  }
-  
-  
-  .header a {
-    text-decoration: none;
-    margin: 5px 10px;
-    font-size: 0.8rem;
-    color: #555;
-    width: 30vw;
-  }
+  background-color: #202124;
+  font-family: 'arial', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  min-height: 500px;
+}
 
-  .logo {
-    margin-bottom: -10px;
-    width: 30px;
-    height: 30px;
-    border-radius: 20px;
-  }
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+}
 
-  .header a:hover {
-    color: #555;
-    text-decoration: underline;
-  }
-  
-  .apps-bg {
-      width: 45px;
-      height: 45px;
-      justify-content: center;
-      align-items: center;
-      margin: 8px;
-    }
-    
-    .apps {
-      width: 20px;
-    }
-    
-    .sign-in {
-      background-color: #1a73e8;
-      margin: 0 15px 0 10px;
-      width: 100px;
-      font-size: 0.9rem;
-    }
-    
-    /* MAIN */
-    .main-text {
-      height: 60vh;
-      margin: 70px auto;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    
-    
-    .google-img {
-      width: 300px;
-    }
-    
-    .search {
-      margin: 30px auto 10px;
-      position: relative;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    
-    .search-input {
-      width: 550px;
-      height: 45px;
-      border-radius: 45px;
-      border: 1px #d3d3d3 solid;
-      padding: 1px 50px 1px 40px;
-      flex-shrink: 0;
-    }
-    
-    .search-input:hover,
-    .search-input:focus {
-      box-shadow: 0 2px 3px 1px rgba(201, 201, 201, 0.5);
-      outline: none;
-    }
-    
-    .search #microphone {
-      height: 20px;
-      position: relative;
-      margin-left: -20px;
-      right: 15px;
-    }
-    
-    .main-text-buttons {
-      display: flex;
-      margin: 20px;
-    }
-    
-    .button {
-      margin: 1px 10px;
-      padding: 5px 10px;
-      font-size: 0.9rem;
-      color: #555;
-    }
-    
-    .button:hover {
-      box-shadow: 0 0 2px 1px rgba(189, 189, 189, 0.5);
-      border: 1px solid transparent;
-      cursor: pointer;
-    }
-    
-    /* FOOTER */
-    .flex-footer {
-      width: 100vw;
-      background-color: #f2f2f2;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      position: absolute;
-      bottom: 0;
-    }
-    
-    .flex-footer1 {
-      height: 6vh;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      margin-left: 20px;
-    }
-    
-    .flex-footer2 {
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      margin: 0 20px;
-    }
-    
-    .flex-settings,
-    .flex-about {
-      height: 6vh;
-      display: flex;
-    }
-    
-    .flex-settings span,
-    .flex-about span,
-    .country {
-      font-size: 0.8rem;
-      color: #555;
-      padding: 1.7vh 10px 1vh;
-      flex-shrink: 1;
-    }
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  width: 100%;
+}
 
-    @media only screen and (max-width: 600px) {
-      .search-input {
-        width: 90%;
-        padding: 1px 30px 1px 20px;
-      }
-    
-      .google-img {
-        width: 60%;
+.item{
+  align-items: center;
+  text-align: center;
+  margin: 0.5svh;
+}
+
+.header a {
+  color:#bdc1c5;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.gimg {
+  max-width: 50svh;
+  min-width: 20svh;
+  height: auto;
+}
+
+form{
+  margin-bottom: 10svh;
+}
+
+.bottom {
+  width: 100%;
+  background-color: #171717;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  justify-content: space-between;
+  left: 0;
+  bottom: 0;
+  min-height: 2svh;
+  padding-block: 3svh;
+}
+
+.bottom a {
+  color:#d8d9dc;
+  text-decoration: none;
+  font-size: 13px;
+  margin: 0 10px;
+  padding-inline: 1svh;
+}
+
+.bottom a:hover{
+  text-decoration: underline;
+}
+
+button {
+  background-color: #303134;
+  padding-inline: 15px;
+  padding-block: 10px;
+  color: #e6e8ea;
+  text-decoration: none;
+  border: 1px solid transparent;
+  margin-top: 25px;
+  margin-inline: 3px;
+  border-radius: 3px;
+}
+
+button:hover{
+  cursor: pointer;
+  border: 1px #5e636e solid;
+}
+
+/* .searchbar {
+  border: 1px #5e636e solid;
+  background-color: #202124;
+  border-radius: 40px;
+  padding-inline-start: 50px;
+  padding-inline-end: 350px;
+  padding-block: 15px;
+  margin-top: 20px;
+  color: white;
+} */
+
+
+.searchbar #search {
+  position: relative;
+  left: 40px;
+  top: 2px;
+}
+
+.searchbar #microphone, #camera {
+  position: relative;
+  right: 80px;
+  padding: 5px;
+  top: 2px;
+  color: white;
+}
+
+.searchbar-input {
+  border: 1px #5e636e solid;
+  background-color: #202124;
+  border-radius: 40px;
+  padding-inline-start: 50px;
+  padding-inline-end: 350px;
+  padding-block: 15px;
+  margin-top: 20px;
+  color: white;
+}
+
+input:hover {
+  background-color: #303134 ;
+  border-color: #303134;
+}
+
+#search {
+  color: white;
+}
+
+/* PHONE */
+@media only screen and (max-width: 720px) {
+      .searchbar-input{
+          width: 80vw;
+          padding-inline-start: 1vw;
+          padding-inline-end: 5vw;
       }
 
-      #microphone {
-        margin-left: -20px;
+      .searchbar #search {
+          position: relative;
+          left: 40px;
+          top: 2px;
       }
-    }
+
+      .searchbar #microphone, #camera {
+          position: relative;
+          top: -37px;
+          left: 130px;
+      }
+
+      .bottom a, .bottom{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          font-size: smaller;
+          width: 100vw;
+          margin: 0;
+          margin-block: 2px;
+      }
+      .container{
+          width: 100vw;
+          min-height: 100vw;
+      }
+      .header a, .header{
+          font-size: smaller;
+          padding: 1px;
+          margin: 10px;
+          justify-content: center;
+      }
+      .gimg{
+          width: 50vw;
+      }
+      .main{
+          width: 100vw;
+          padding: 0;
+          padding-top: 40vw;
+      }
+}

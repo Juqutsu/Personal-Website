@@ -1,73 +1,65 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Google Homepage</title>
-
+    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADmUlEQVR4Ab1XA5AjQRQ9G6UrnV0627Zt27Zt27Zt27Z9FyeXiZN3v1NzW9vTmd3J6lW9cKbf6690EmlFIBDIQGzr9/vXE+8RjUSPTIP82Xq6pg27VvPCGoTz08KbiE5oBF3rIG6ge/PGWBhAGlpkAdEHzRCMeInzyEjqcHedj258gbgBM/KU1syjVbwo3aBHCPh+foe0YyMsw/vC0KI2dDVLQ1ejFAzNasI8tDekLWvh+/5VzYQOQGENOxfFfb9+wDplNHTVS0JXrUTUpGusk0aye0Ka4CPBi6cNFXbn2RPQ16vIi2igvn4luC6dVUuHWBOs4KCAtGtzOKICbXOnqKVjbqhW8yl2rrqwqUcb2Nctg/P4QThPHKLXy2Hq2ZYXXzgTCARUu4NLBetzZbHp61YQhI3tG8N9/zbU4L53C4bW9fF3+XwtnbH+f79nVA4Z++IBgri5fxcEbDZEh4Bk19qaEkUhPQt/W24Bxwd4z6SEdVSOCHHWcn6LCXEN0m7Fwr+ec/ZpJrznkwcpLcsEfZ3icJ4+hvgAaa9hBu5x+X9Qk4lH0H0wJ+D1xpeB28yAEZHgvZqFM+B71gZRoeoMu2ZeeuEVBhMz4OEMXEjJGfC/nxBnBnbc8CgNuBPUwKYr7pAGDFGm4GnrODOw97YQAZ1YhA9rcQa+Xy0Ij9+LcPFR5xcMXHnlFYtQbMPZEeLHTuRE+d2NcfjDeYSL3bc8goFfloDYhuwMxw+iT3CcT42Zh4uh+O5mQdY83BUGpxla8dcZQPPFEifeeY0j1CBqGTxskhPu20W3pjJhju3PjIDFHf0o9viAUbucwu73iPmXAKT7/2O0AZHw065Dxf3tBBP1j/bC1R/3oYa35s/odmQ3CVo5cRYNh1sI/9rIP8d5/X6+0k59vioLi2x+ciAWPNyEvW9PYd+701jxdAe6nx+HErubB78vtXkUqsz5FmHg2mufUtxDmrmVB5J5UGDb6yOCuFaW2NEZFRfeFXpfNjBL7Rj+DAqc+XKd0tE+bAOl9rTEuqdHQok/BpBK7VyYRz69cvgl6THu5iKU3NNck3ivixPxyvQhlPhvALmi+0NSmDfBF+eWV4fQ//JU1DnSA6X3tmQ7pTbthh4XJgRr4bXpI2QI4rTBQurKYiSeIo7Awi7sXIOJ1Oz0SvTGQthDnKWW83CisZ4ohSEsEdfKrRY3YAdIYis2v4m3iTqiW6ZO/mwNG6/yhNOEf6HhfzYhUKeuAAAAAElFTkSuQmCC">
+    <title>Google</title>
     <link rel="stylesheet" href="../css/googlenew.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 </head>
-
 <body>
+
     <div class="container">
-
-        <div class="header">
+        <div class="header"> <!-- Header -->
             <div>
-                <a href="https://about.google/" target="_blank">Über Google</a>
-                <a href="https://store.google.com/DE/" target="_blank">Store</a>
+                <a href="https://about.google/?fg=1&utm_source=google-DE&utm_medium=referral&utm_campaign=hp-header" target="_blank">Über Google</a>
+                <a href="https://store.google.com/DE/?utm_source=hp_header&utm_medium=google_ooo&utm_campaign=GS100042&hl=de&pli=1" target="_blank">Store</a>
             </div>
             <div>
-                <a href="https://gmail.com" target="_blank">Gmail</a>
-                <a href="https://www.google.de/imghp" target="_blank">Bilder</a>
-                <a href="https://about.google/products/" target="_blank">⋮⋮⋮</a>
-                <a href="#login"><img class="logo" src="..//images/logocard.jpg" alt="logo"></a>
+                <a href="https://mail.google.com/mail/u/0/?ogbl#inbox" target="_blank">Gmail</a>
+                <a href="https://www.google.com/imghp?hl=de&authuser=0&ogbl" target="_blank">Bilder</a>
+                <a href="https://about.google/products/#all-products" target="_blank">⋮⋮⋮</a>
+                <a href="https://myaccount.google.com/" target="_blank">Login</a>
             </div>
         </div>
-
-        <div class="main-page-grid">
-
-            <div class="main-text">
-
-                <div class="google-img-div">
-                    <img class="google-img" src="../images/google.png" alt="Google">
-                </div>
-
-                <form action="https://www.google.de/search" method="GET">
-                    <div class="search">
-                        <input type="text" name="q" class="search-input"> 
-                        <i id="microphone" class="bx bxs-microphone"></i>
+        <div class="main"> <!-- Main -->
+            <div class="item">
+                <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_272x92dp.png" class="gimg">
+            </div>
+            <div class="item">
+                <form action="https://google.com/search" method="GET"> 
+                    <div class="searchbar">
+                        <i id="search" class="bx bx-search"></i>
+                        <input type="text" name="q"  class="searchbar-input" required autocomplete="off">
+                        <a><i id="microphone" class="bx bxs-microphone"></i></a>
+                        <a><i id="camera" class="bx bxs-camera"></i></a>
                     </div>
-                    <button type="submit" class="btn btn-light button"> Google Suche </button>
-                    <button type="button" class="btn btn-light button">Auf Gut Glück!</button><br>
-                </form>
+                    <div>
+                        <button type="submit">Google Suche</button>
+                        <a href="https://www.google.com/search?q=kitten"><button type="button">Auf gut Glück!</button></a>
+                    </div>
+            </div>
+            </form>
 
+        </div>
+        <div class="bottom"> <!-- Footer -->
+            <div class="item" style="align-content: flex-start;">
+                <a href="https://ads.google.com/intl/de_de/home/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1" target="_blank">Werbeprogramme</a>
+                <a href="https://smallbusiness.withgoogle.com/intl/de_de/?subid=de-de-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google&utm_medium=ep&utm_campaign=google_hpbfooter&utm_content=google_hpbfooter&gmbsrc=de-de-et-gs-z-gmb-s-z-u~sb-g4sb_srvcs-u#!/" target="_blank">Unternehmen</a>
+                <a href="https://www.google.com/search/howsearchworks/?fg=1" target="_blank">Wie funktioniert die Google Suche?</a>
+            </div>
+            <div class="item">
+                <a href="https://sustainability.google/intl/de/klimaschutz/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=" target="_blank">Drei Jahrzehnte Klimaschutz: Jede Entscheidung zählt </a>
+            </div>
+            <div class="item" style="align-content: flex-end;">
+                <a href="https://policies.google.com/privacy?hl=de&fg=1" target="_blank">Datenschutzerklärung</a>
+                <a href="https://policies.google.com/terms?hl=de&fg=1" target="_blank">Nutzungsbedingungen</a>
+                <a href="googleindex.html">Zurück</a>
             </div>
         </div>
     </div>
-
-
-    <div class="flex-footer">
-        <div class="flex-footer1">
-            <span class="country">Deutschland</span>
-        </div>
-        <div class="flex-footer2">
-            <div class="flex-about">
-                <span>Werbeprogramme</span>
-                <span>Unternehmen</span>
-                <span>Wie funktioniert die Google Suche?</span>
-            </div>
-            <div class="flex-settings">
-                <span>Datenschutzerklärung</span>
-                <span>Nutzungsbedingungen</span>
-                <span>Einstellungen</span>
-            </div>
-        </div>
-    </div>
-
+    
 </body>
-
 </html>
