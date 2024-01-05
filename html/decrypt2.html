@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verschlüsselung & Entschlüsselung</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon2.png">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow: hidden;
+        }
+        
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #d6ccc2;
+        }
+
+        .type {
+            text-align: center;
+            width: 550px;
+            height: 400px;
+            background-color: #f5ebe0;
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+            color: black;
+        }
+
+        .type .input {
+            width: 70%;
+            height: 10%;
+            border-radius: 10px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+            padding-left: 12px;
+        }
+
+        .type h1 {
+            margin-top: 30px;
+            margin-bottom: 8px;
+            font-size: 35px;
+            color: #8a817c;
+        }
+
+
+        .type #decryptBtn, #encryptBtn {
+            margin-top: 10px;
+            margin-bottom: 12px;
+            width: 22%;
+            height: 10%;
+            border: 2px solid #ccc5b9;
+            background-color: #d6ccc2;
+            border-radius: 10px;
+            color: #8a817c;
+        }
+
+        .type #copyBtn {
+            width: 22%;
+            height: 10%;
+            border: 2px solid #ccc5b9;
+            background-color: #d6ccc2;
+            border-radius: 10px;
+            color: #8a817c;
+        }
+
+        .type button:active {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+
+        .type a {
+            text-decoration: none;
+            color: #8a817c;
+        }
+
+        .type a:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
+
+        .type #copy {
+            color: #8a817c;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <!-- Caesar -->
+
+    <div class="container">
+        <div class="type">
+            <h1>WE CRYPST</h1>
+            <input class="input" id="cypher" type="text" placeholder="Gib einen Text ein">
+            <br>
+            <input class="input" id="offset" type="number" placeholder="Offset" value="3">
+            <br>
+            <input type="text" id="finish" class="input" placeholder="Ver- und Entschlüsselung (Klicke auf die Knöpfe)">
+            <br>
+            <button id="copyBtn" onclick="copyText()">Copy Text</button>
+            <button id="copyBtn" onclick="resetText()">Reset Text</button>
+            <br>
+            <button id="encryptBtn">Verschlüsseln</button>
+            <button id="decryptBtn">Entschlüsseln</button>
+            <br>
+            <p id="copy"></p>
+            <a href="../index.html">Go Back</a>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('encryptBtn').addEventListener('click', function () {
+            encrypt();
+        });
+    
+        document.getElementById('decryptBtn').addEventListener('click', function () {
+            decrypt();
+        });
+    
+        function encrypt() {
+            var text = document.getElementById('cypher').value;
+            var offset = parseInt(document.getElementById('offset').value);
+            var output = '';
+    
+            for (var i = 0; i < text.length; i++) {
+                var charCode = text.charCodeAt(i);
+    
+                if (charCode >= 65 && charCode <= 90) {
+                    output += String.fromCharCode((charCode - 65 + offset) % 26 + 65);
+                } else if (charCode >= 97 && charCode <= 122) {
+                    output += String.fromCharCode((charCode - 97 + offset) % 26 + 97);
+                } else {
+                    output += text[i];
+                }
+            }
+    
+            document.getElementById('finish').value = output;
+        }
+    
+        function decrypt() {
+            var text = document.getElementById('cypher').value;
+            var offset = parseInt(document.getElementById('offset').value);
+            var output = '';
+    
+            for (var i = 0; i < text.length; i++) {
+                var charCode = text.charCodeAt(i);
+    
+                if (charCode >= 65 && charCode <= 90) {
+                    output += String.fromCharCode((charCode - 65 - offset + 26) % 26 + 65);
+                } else if (charCode >= 97 && charCode <= 122) {
+                    output += String.fromCharCode((charCode - 97 - offset + 26) % 26 + 97);
+                } else {
+                    output += text[i];
+                }
+            }
+    
+            document.getElementById('finish').value = output;
+        }
+
+        function copyText() {
+            var copyText = document.getElementById("finish");
+            var copy = document.getElementById("copy")
+
+            copyText.select();
+            copyText.setSelectionRange(0, 999999);
+
+            navigator.clipboard.writeText(copyText.value);
+
+            copy.innerText = "Text wurde erfolgreich kopiert!";
+            
+            setTimeout(function () {
+                fadeOut(copy);
+            }, 2000);
+
+        }
+
+        function fadeOut(element) {
+            var opacity = 1;
+            var interval = 50; // Duration of each step in milliseconds
+            var fadeOutTimer = setInterval(function () {
+                if (opacity > 0) {
+                    opacity -= 0.1; // Adjust the value as needed for the desired speed
+                    element.style.opacity = opacity;
+                } else {
+                    clearInterval(fadeOutTimer);
+                    element.innerText = ""; // Remove the text content after fading out
+                    element.style.opacity = 1; // Reset opacity for future use
+                }
+            }, interval);
+        }
+
+        function resetText() {
+            var textInput = document.getElementById("cypher");
+            var textOutput = document.getElementById("finish");
+
+            textInput.value = "";
+            textOutput.value = "";
+        }
+    </script>
+
+</body>
+</html>

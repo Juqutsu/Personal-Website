@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verschlüsselung & Entschlüsselung</title>
+    <link rel="icon" type="image/x-icon" href="../images/favicon2.png">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
     <style>
@@ -56,6 +57,7 @@
 
         .type button {
             margin-top: 10px;
+            margin-bottom: 12px;
             width: 22%;
             height: 12%;
             border: 2px solid #ccc5b9;
@@ -68,6 +70,15 @@
             background-color: rgba(0, 0, 0, 0.2);
         }
 
+
+        .type a {
+            text-decoration: none;
+            color: #8a817c;
+        }
+
+        .type a:hover {
+            color: rgba(0, 0, 0, 0.7);
+        }
 
 
 
@@ -83,12 +94,14 @@
             <h1>WE CRYPST</h1>
             <input class="input" id="cypher" type="text" placeholder="Gib einen Text ein">
             <br>
-            <input class="input" id="offset" type="number" placeholder="Offset">
+            <input class="input" id="offset" type="number" placeholder="Offset" value="3">
             <br>
-            <input type="text" id="finish" class="input" placeholder="Ver- und Entschlüsselung">
+            <input type="text" id="finish" class="input" placeholder="Ver- und Entschlüsselung (Klicke auf die Knöpfe)">
             <br>
             <button id="encryptBtn">Verschlüsseln</button>
             <button id="decryptBtn">Entschlüsseln</button>
+            <br>
+            <a href="../index.html">Go Back</a>
         </div>
     </div>
     

@@ -1,22 +1,34 @@
-var alphabet = "abcdefghijklmnopqrstuvwxyz";
-var fullAlphabet = alphabet + alphabet + alphabet;
+var alphabet = "abcdefghijklmnopqrstuvwxyz"; /* String alphabet */
+var fullAlphabet = alphabet + alphabet + alphabet; /*  */
+
+/* Verschlüsselungsfunktion */
 
 function encryptText() {
-  var cipherText = $('#cypher').val();
-  var cipherOffset = $('#offset').val();
-  cipherOffset = (cipherOffset % alphabet.length);
+  /* Holt den Text aus den Inputs */
+  var text = $('#cypher').val();
+  var offset = $('#offset').val();
+
+  /* Verschiebungslänge ist auf die Länge des Alphabets angepasst  */
+
+  offset = (offset % alphabet.length);
+
+  /* Verschlüsselungstext */
   var cipherFinish = '';
 
-  for (var i = 0; i < cipherText.length; i++) {
-    var letter = cipherText[i];
+
+  for (var i = 0; i < text.length; i++) {
+    var letter = text[i];
     var upper = (letter == letter.toUpperCase());
     letter = letter.toLowerCase();
 
+    // Finde den Index des aktuellen Buchstabens im Alphabet
     var index = alphabet.indexOf(letter);
+    // Überprüfe, ob der Buchstabe nicht im Alphabet ist
     if (index == -1) {
       cipherFinish += letter;
     } else {
-      index = ((index + cipherOffset) + alphabet.length);
+      // Berechnung des Buchstabens
+      index = ((index + offset) + alphabet.length);
       var nextLetter = fullAlphabet[index];
       if (upper) nextLetter = nextLetter.toUpperCase();
       cipherFinish += nextLetter;
@@ -25,23 +37,28 @@ function encryptText() {
 
   $('#finish').val(cipherFinish);
 }
+
+/* Entschlüsselungsfunktion */
 
 function decryptText() {
-  var cipherText = $('#cypher').val();
-  var cipherOffset = $('#offset').val();
-  cipherOffset = (cipherOffset % alphabet.length);
+  var text = $('#cypher').val();
+  var offset = $('#offset').val();
+  offset = (offset % alphabet.length);
   var cipherFinish = '';
 
-  for (var i = 0; i < cipherText.length; i++) {
-    var letter = cipherText[i];
+  for (var i = 0; i < text.length; i++) {
+    var letter = text[i];
     var upper = (letter == letter.toUpperCase());
     letter = letter.toLowerCase();
 
+   
     var index = alphabet.indexOf(letter);
+   
     if (index == -1) {
       cipherFinish += letter;
     } else {
-      index = ((index - cipherOffset) + alphabet.length);
+      
+      index = ((index - offset) + alphabet.length);
       var nextLetter = fullAlphabet[index];
       if (upper) nextLetter = nextLetter.toUpperCase();
       cipherFinish += nextLetter;
@@ -49,30 +66,38 @@ function decryptText() {
   }
 
   $('#finish').val(cipherFinish);
+
 }
 
+// Ausführung wenn fertig
+
 $(document).ready(function() {
+
+  // Wenn der Verschlüsselungsbutton gedrückt wird, wird die Funktion encryptText ausgeführt
   $('#encryptBtn').click(function() {
     encryptText();
   });
+
+  // Wenn der Entschlüsselungsbutton gedrückt wird, wird die Funktion decryptText ausgeführt
 
   $('#decryptBtn').click(function() {
     decryptText();
   });
 
-  $('#cypher').keypress(function() {
-    setTimeout(function() {
-      encryptText();
-    }, 20);
-  });
 
-  $('#cypher').blur(function() {
-    encryptText();
-  });
+  // Live Update für Schrift
+
+  // $('#cypher').keypress(function() {
+  //   setTimeout(function() {
+  //     encryptText();
+  //   }, 20);
+  // });
+
+  // $('#cypher').blur(function() {
+  //   encryptText();
+  // });
 
   $('#offset').change(function() {
     setTimeout(encryptText, 20);
   });
-
-  encryptText();
 });
