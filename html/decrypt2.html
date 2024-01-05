@@ -131,7 +131,10 @@
         document.getElementById('decryptBtn').addEventListener('click', function () {
             decrypt();
         });
-    
+
+        var cypher = document.getElementById("cypher");
+        var finish = document.getElementById("finish");
+
         function encrypt() {
             var text = document.getElementById('cypher').value;
             var offset = parseInt(document.getElementById('offset').value);
@@ -178,9 +181,7 @@
 
             copyText.select();
             copyText.setSelectionRange(0, 999999);
-
             navigator.clipboard.writeText(copyText.value);
-
             copy.innerText = "Text wurde erfolgreich kopiert!";
             
             setTimeout(function () {
@@ -211,6 +212,20 @@
             textInput.value = "";
             textOutput.value = "";
         }
+
+        cypher.addEventListener("keypress", (event) => {
+            setTimeout(function() {
+                encrypt();
+            }, 20);
+        });
+
+        cypher.addEventListener("blur", (event) => {
+            setTimeout(function() {
+                encrypt();
+            });
+        })
+
+        
     </script>
 
 </body>
