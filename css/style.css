@@ -1,3 +1,5 @@
+@import 'variables.css';
+
 *{
 	padding: 0;
 	margin: 0;
@@ -6,16 +8,6 @@
 	list-style: none;
 	text-decoration: none;
 	scroll-behavior: smooth;
-}
-:root{
-	--bg-color:  #111;
-	--text-color: #ffffff;
-	--secound-color: #FF9677;
-  --third-color: #974063;
-	--main-color: #F54768;
-	--big-font: 5rem;
-	--h2-font: 3rem;
-	--p-font: 1.1rem;
 }
 
 body{

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word</title>
+    <link rel="stylesheet" href="../css/shorts.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Random Wörter Abkürzungen</h1>
+            <p>Schreiben Sie das komplette Wort aus!</p>
+
+            <input type="text" name="abk" id="abk" value="?" disabled>
+            <input type="text" id="ausg" oninput="check()">
+            <br>
+            <a id="tf">?</a>
+            <br>
+            <button type="submit" onclick="reroll()">ReRoll</button>
+            <button type="submit" onclick="dk()">Dont Know</button>
+        </div>
+        
+    </div>
+    <script src="../shorts.js"></script>
+</body>
+</html>

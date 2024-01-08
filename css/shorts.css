@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #d6ccc2;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    font-family: monospace;
+    color: darkcyan;
+    text-align: center;
+}
+
+input {
+    text-align: center;
+    color: #8a817c;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+
+button {
+    width: 25%;
+    height: 25px;
+    border: 2px solid #ccc5b9;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: #8a817c;
+}
