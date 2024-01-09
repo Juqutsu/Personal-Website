@@ -16,21 +16,45 @@ body {
     text-align: center;
 }
 
+.main {
+    width: 700px;
+    height: 250px;
+    background-color: #f5ebe0;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
 input {
     text-align: center;
     color: #8a817c;
+    height: 30px;
+    font-size: 20px;
+    border: #8a817c;
+    border-radius: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    padding-top: 25px;
+    font-size: 40px;
+}
+
+a,p {
+    font-size: 20px;
 }
 
 p {
     margin-bottom: 10px;
+    
 }
 
 
 button {
-    width: 25%;
-    height: 25px;
+    width: 130px;
+    height: 40px;
     border: 2px solid #ccc5b9;
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.1);
     color: #8a817c;
+    font-size: 20px;
 }

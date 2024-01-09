@@ -7,7 +7,7 @@
 */
 const Abk = ['DDR','RAM','MBR','PXE','URL','KVM','DNS','SSID','PoE','USV','TAS','APIPA','DBMS'];
 const Ausg = ['Double Data Rate', 'Random Access Memory','Master Boot Record',
-'Preboot Execution Environment','Uniform Resource Locator','Keyborad Video Mouse', 
+'Preboot Execution Environment','Uniform Resource Locator','Keyboard Video Mouse', 
 'Domain Name System','Service Set Identifier','Power over Ethernet',
 'Unterbrechungsfreie Stromversorgung','Tool assisted speedrun','Automatic Private IP Adressing',
 'Datenbank Management System'];
