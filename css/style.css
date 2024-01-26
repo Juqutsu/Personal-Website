@@ -10,10 +10,12 @@
 	scroll-behavior: smooth;
 }
 
-body{
+body { 
 	background: var(--bg-color);
 	color: var(--text-color);
-}
+} 
+ 
+
 
 header{
 	width: 100%;
