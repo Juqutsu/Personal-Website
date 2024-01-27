@@ -51,7 +51,6 @@ function copyText() {
          pw.select();
          pw.setSelectionRange(0, 999);
          navigator.clipboard.writeText(pw.value);
-         
     } else {
         copyBtn.innerHTML = "Nothing to copy!";
     }
