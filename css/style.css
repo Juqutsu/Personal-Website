@@ -316,6 +316,18 @@ header.sticky{
   color: red;
 }
 
+::-webkit-scrollbar {
+	width: 7px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: #ffffff14;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: white;
+}
+
 @media (max-width: 1425px){
 	header{
 		padding: 16px 3%;
