@@ -14,7 +14,7 @@ function check() {
                 points.innerHTML = (current_pts + " / 47");
                 input.value = "";
                 console.log("TRUE");
-                break; // Exit the loop if a match is found
+                break; 
             }
         }
     }
