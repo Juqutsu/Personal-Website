@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flaggen Quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.0.0/css/flag-icons.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <p id="points" class="points">0/47</p>
+            <h1 id="heading" class="heading">EU Länder Quiz</h1>
+            <span id="flag"></span>
+            <input type="text" placeholder="Type country.." id="countryInput" class="countryInput" oninput="check()" autocomplete="off">
+            <div class="buttons">
+                <button id="reset" class="reset" onclick="reset()">Reset</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <h1 id="guessed" class="guessed">Guessed</h1>
+            <ol id="myUl" reversed>
+            </ol>
+        </div>
+    </div>
+    <script src="flags.js"></script>
+</body>
+</html> 

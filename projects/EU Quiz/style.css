@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: rgba(0, 0, 0, 0.5);
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: row;
+    background-color: #81B29A;
+    gap: 20px;
+}
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 0px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 10px 0px;
+    border: 3px solid rgba(0, 0, 0, 0.3);
+    border-radius: 6px;
+    gap: 10px;
+}
+
+.left input {
+    width: 50%;
+    height: 30px;
+    text-align: center;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    
+}
+
+input::placeholder, input:focus {
+    color: rgba(0, 0, 0, 0.55);
+    outline: none;
+}
+
+.buttons button {
+    width: 80px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    color: #f4f1de;
+    border-radius: 4px;
+}
+
