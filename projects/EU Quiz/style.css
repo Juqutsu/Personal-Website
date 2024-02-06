@@ -79,11 +79,11 @@ input::placeholder, input:focus {
     }
 
     .left p {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
 }
 
-@media (max-width: 600px) {
+@media (min-width: 200px) and (max-width: 999px) {
 
     .container {
         display: flex;
