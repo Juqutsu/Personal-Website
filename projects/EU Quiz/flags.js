@@ -13,7 +13,6 @@ function check() {
                 current_pts++;
                 points.innerHTML = (current_pts + " / 47");
                 input.value = "";
-                console.log("TRUE");
                 break; 
             }
         }
@@ -36,12 +35,12 @@ function addItem(a) {
     const newItem = document.createElement("li");
     newItem.textContent = a;
   
-    // Insert the new item as the first child of the list
     myList.insertBefore(newItem, myList.firstChild);
   }
 
   function deleteAllItems() {
     const myList = document.getElementById("myUl");
+
     while (myList.firstChild) {
       myList.removeChild(myList.firstChild);
     }

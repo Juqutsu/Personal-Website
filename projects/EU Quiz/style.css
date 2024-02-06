@@ -25,7 +25,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 400px;
+    width: 30vw;
+    height: 15vw;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 10px 0px;
     border: 3px solid rgba(0, 0, 0, 0.3);
@@ -33,12 +34,13 @@ body {
     gap: 10px;
 }
 
+
 .right {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 250px;
+    width: 20vw;
     background-color: rgba(0, 0, 0, 0.2);
     padding: 10px 0px;
     border: 3px solid rgba(0, 0, 0, 0.3);
@@ -47,8 +49,8 @@ body {
 }
 
 .left input {
-    width: 50%;
-    height: 30px;
+    width: 20vw;
+    height: 40px;
     text-align: center;
     border-radius: 6px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -63,7 +65,7 @@ input::placeholder, input:focus {
 }
 
 .buttons button {
-    width: 80px;
+    width: 8vw;
     height: 30px;
     background-color: rgba(0, 0, 0, 0.1);
     border: 2px solid rgba(0, 0, 0, 0.4);
@@ -71,3 +73,45 @@ input::placeholder, input:focus {
     border-radius: 4px;
 }
 
+@media (min-width: 1000px) {
+    h1 {
+        font-size: 2vw;
+    }
+
+    .left p {
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .left {
+        width: 60vw;
+        height: 20vh;
+    }
+
+    .left input {
+        width: 40vw;
+        height: 3.5vh;
+    }
+
+    .left button {
+        width: 20vw;
+    }
+    
+
+    .right {
+        width: 40vw;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+}
