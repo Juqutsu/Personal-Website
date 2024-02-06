@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand';
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffe5d9;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 40vw;
+    height: 400px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+.main h1 {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 3vw;
+}
+
+.main p {
+    font-size: 1.5vw;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+.main img {
+    margin: 10px;
+    width: 250px;
+    border-radius: 8px;
+    border: 2.5px solid rgba(0, 0, 0, 0.5);
+}
+
+.main input {
+    width: 25vw;
+    height: 25px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #ffe5d9;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    width: 10vh;
+    height: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    background-color: #ffe5d9;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+.main input:focus {
+    outline: none;
+}
+
+@media (min-width: 100px) and (max-width: 700px) {
+    .main {
+        width: 70vw;
+        height: 40vh;
+    }
+
+    .main h1 {
+        font-size: 6vw;
+    }
+
+    .main p {
+        font-size: 4vw;
+    }
+
+    .main img {
+        width: 40vw;
+    }
+}
+
+@media (min-width: 1000px) {
+    .main {
+        width: 40vw;
+        height: 40vh;
+    }
+
+    .main h1 {
+        font-size: 2vw;
+    }
+
+    .main p {
+        font-size: 1.5vw;
+    }
+
+    .main img {
+        width: 15vw;
+    }
+
+    .main input {
+        width: 15vw;
+    }
+}

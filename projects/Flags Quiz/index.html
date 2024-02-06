@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1 class="heading" id="heading">Flags of the World</h1>
+        <p id="score" class="score">Your Score - 0/201</p>
+        <img id="flag" src="img/flags/cx.svg" alt="flag">
+        <input type="text" id="input" placeholder="Country" oninput="flag()">
+        <div>
+            <button id="skipBtn" onclick="reroll()">Skip</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+
+    </div>
+    <script src="flags.js"></script>
+</body>
+</html>
