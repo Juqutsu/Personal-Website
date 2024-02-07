@@ -55,6 +55,8 @@ let score = document.getElementById("score");
 let currentPts = 0;
 let newFlag = 0;
 
+score.innerHTML = "Your Score - " + (currentPts + " / " + totalPoints);
+
 reroll();
 
 function flag() {
@@ -69,6 +71,15 @@ function flag() {
             currentPts++;
             score.innerHTML = "Your Score - " + (currentPts + " / " + totalPoints);
             reroll();
+        }
+
+        if(currentPts === totalPoints) {
+            displayFlag.src = ("200w.gif");
+            displayFlag.clientWidth = 100;
+            score.innerHTML = "Gewonnen. \n Reset in 5 Sekunden!";
+            setTimeout(function () {
+                location.reload();
+            }, 5000);
         }
     }
 }
