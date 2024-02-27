@@ -30,8 +30,8 @@ function reroll() {
     if(a === x && Abk.length >= 1) {
         a = getRandomNumber(0,(Abk.length-1));
     } else {
-        tfobj.innerHTML = "Sie haben Gewonnen!"
-        abkobj.value = "Sie haben Gewonnen!"
+        tfobj.innerHTML = "Alle Wörter durch!"
+        abkobj.value = "Alle Wörter durch!"
         setTimeout(function() {
             reset();
         }, 4000);
