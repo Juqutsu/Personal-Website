@@ -1,47 +1,27 @@
-const mysql = require('mysql');
+const express = require("express");
+const mysql = require("mysql");
 
-// Create connection configuration
+const app = express();
+
 const connection = mysql.createConnection({
-    host: 'localhost', // Replace with your database host
-    user: 'u942892833_admin', // Replace with your database username
-    password: '6z]wboO[T', // Replace with your database password
-    database: 'u942892833_Short' // Replace with your database name
+    host: 'localhost',
+    user: 'u942892833_admin',
+    password: '6z]wboO[T',
+    database: 'u942892833_Short'
 });
 
-// Establish connection
-connection.connect((error) => {
-    if (error) {
-        console.error('Error connecting to the database:', error);
-        return;
-    }
-    console.log('Connected to the database');
-    
+// Route handler for fetching data
+app.get("/data", (req, res) => {
     connection.query('SELECT * FROM words', (error, results, fields) => {
         if (error) {
             console.log('Error retrieving data:', error);
+            res.status(500).json({ error: "Failed to retrieve data from database" });
             return;
         }
-
-        // Log the retrieved data
-        console.log('Retrieved data:', results);
-
-        // Process the retrieved data as needed
-        // For example, you can iterate over the results and log each row
-        results.forEach(row => {
-            console.log(row); // Log each row
-        });
-
+        res.json(results);
     });
+});
 
-
-    // Perform database operations here
-    
-    // Close the connection when done
-    connection.end((error) => {
-        if (error) {
-            console.error('Error closing the connection:', error);
-            return;
-        }
-        console.log('Connection closed');
-    });
+app.listen(3000, () => {
+    console.log("Server is running on port 3000");
 });
