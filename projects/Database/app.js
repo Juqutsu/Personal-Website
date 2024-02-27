@@ -1,9 +1,8 @@
-// app.js
 document.getElementById("fetchDataBtn").addEventListener("click", function() {
-    fetch("/data") // Send a request to fetch data from the server
+    fetch("/data")
         .then(response => {
             if (!response.ok) {
-                throw new Error("Failed to fetch data from MySQL");
+                throw new Error("Failed to fetch data from server");
             }
             return response.json();
         })
@@ -18,6 +17,8 @@ document.getElementById("fetchDataBtn").addEventListener("click", function() {
             });
         })
         .catch(error => {
-            console.error("Error:", error);
+            console.error("Error fetching data:", error);
+            // Display an error message to the user
+            alert("Failed to fetch data. Please try again later.");
         });
 });
