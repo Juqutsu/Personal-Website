@@ -6,27 +6,33 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+body {
+    background-color: antiquewhite;
+}
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: row;
-    background-color: antiquewhite;
+    
 
 }
 
 .main {
     width: 450px;
     height: auto;
-    padding-left: 10px;
 }
 
 .main h1 {
-    float: right;
-    margin-right: 45px;
     color:rgba(0, 0, 0, 0.5);
 }
+
+p {
+    color:rgba(0, 0, 0, 0.5);
+}
+
 
 .main hr {
     width: 50px;
@@ -65,13 +71,15 @@
 }
 
 .projects {
-    display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-	grid-gap: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
 	align-items: center;
+    gap: 10px;
 	margin-top: 5rem;
 	text-align: center;
 	cursor: pointer;
+    max-width: 600px;
 }
 
 .projects h3 {
@@ -83,13 +91,23 @@
 	width: 250px;
 	height: auto;
 	object-fit: cover;
-
     border: 2px solid rgba(0, 0, 0, 0.5);
     border-radius: 8px;
 }
 
-@media (max-width: 800px) {
-    .main h1 {
-        margin-right: 0px;
+
+@media (max-width: 1000px) {
+    .container {
+        flex-direction: column;
     }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+
+
 }
