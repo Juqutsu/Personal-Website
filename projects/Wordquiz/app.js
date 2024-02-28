@@ -19,13 +19,13 @@ let coins = 0
 let x = 0
 let a = 0
 
+coinsP.innerHTML = "Points: " + coins + "/" + Abk.length;
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
 function reroll() {
-    tfobj.innerHTML = '?'
     ausgobj.value = ''
     if(a === x && Abk.length >= 1) {
         a = getRandomNumber(0,(Abk.length-1));
@@ -48,7 +48,7 @@ function check() {
         Abk.splice(x, 1);
         Ausg.splice(x, 1);
         coins++;
-        coinsP.innerHTML = "Points: " + coins;
+        coinsP.innerHTML = "Points: " + coins + "/13";
         reroll();
     } else {
         tfobj.innerHTML = 'Falsch';
@@ -71,11 +71,11 @@ function dk (){
 }
 
 window.onload = function() {
-    reset();
+    reroll();
 };
 
 function reset() {
-    abkobj.value = 'DDR';
+    abkobj.value = Abk[x];
     ausgobj.value = '';
     tfobj.innerHTML = '?';
     tfobj.style.color = '';
