@@ -1,0 +1,16 @@
+:root{
+	--big-font: 5rem;
+	--h2-font: 3rem;
+	--p-font: 1.1rem;
+	--bg-color2: #fefae0;
+
+	/* WHITE MODE */
+
+	--wbg-color:  #e3d5ca;
+	--wtext-color: #4a5759;
+	--wmain-color: #4a4e69;
+
+	--dbg-color: #4a4e69;
+	--dtext-color:  #e3d5ca;
+	--dmain-color: white;
+}
