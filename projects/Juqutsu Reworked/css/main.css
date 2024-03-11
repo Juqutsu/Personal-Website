@@ -71,7 +71,7 @@ main {
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	height: 50vh;
+	height: 55vh;
 }
 
 main img {
@@ -86,7 +86,7 @@ section{
 }
 
 .home{
-	min-height: 60vh;
+	min-height: 65vh;
 	height: 100%;
 	width: 100%;
 	background-size: cover;
@@ -95,7 +95,7 @@ section{
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	align-items: center;
-	grid-gap: 4rem;
+	grid-gap: 8rem;
 }
 .home-text h1{
 	margin: 10px 0px 25px;
